@@ -1,0 +1,357 @@
+{
+  "platform": "windows-x64",
+  "node": "v24.19.0",
+  "date": "2026-09-29T13:48:15.306Z",
+  "rows": [
+    {
+      "case": "T01a-create-after-break-deletes-siblings",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 3.4,
+      "actual": "shape 1 ({{f1}}<BR>{{f2}}): refused (no loss) | shape 2 (prose<BR>{{t}} prose): refused (no loss)"
+    },
+    {
+      "case": "T01a-create-after-break-deletes-siblings",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 2.6,
+      "actual": "shape 1 ({{f1}}<BR>{{f2}}): refused (no loss) | shape 2 (prose<BR>{{t}} prose): refused (no loss)"
+    },
+    {
+      "case": "T01b-create-before-tab-deletes-tab",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 4.4,
+      "actual": "token before tab: refused (no loss) | token after tab: refused (no loss)"
+    },
+    {
+      "case": "T01b-create-before-tab-deletes-tab",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 2.8,
+      "actual": "token before tab: refused (no loss) | token after tab: refused (no loss)"
+    },
+    {
+      "case": "T01c-footer-mint-after-tab-refused",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 8.1,
+      "actual": "footer-token-after-tab: created, wraps the token | footer-two-labels-tab-stop: created, wraps the token | work-order-footer-initials: created, wraps the token"
+    },
+    {
+      "case": "T01c-footer-mint-after-tab-refused",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 9.1,
+      "actual": "footer-token-after-tab: created, wraps the token | footer-two-labels-tab-stop: created, wraps the token | work-order-footer-initials: created, wraps the token"
+    },
+    {
+      "case": "T01d-real-paragraph-many-codes",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 4.5,
+      "actual": "first-token: created 0/1, 110/110 tokens and 219/219 breaks survive | last-token: created 0/1, 110/110 tokens and 219/219 breaks survive | import-all: created 0/110, 110/110 tokens and 219/219 breaks survive"
+    },
+    {
+      "case": "T01d-real-paragraph-many-codes",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 7.2,
+      "actual": "first-token: created 0/1, 110/110 tokens and 219/219 breaks survive | last-token: created 0/1, 110/110 tokens and 219/219 breaks survive | import-all: created 0/110, 110/110 tokens and 219/219 breaks survive"
+    },
+    {
+      "case": "T02a-replace-then-create-loses-siblings",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 4,
+      "actual": "one-run-sentence: replace-first create failed; create-first -> \"Retention: Retainage Note of the sum.\" (clean) | three-run-sentence: replace-first create failed; create-first -> \"Retention: Retainage Note of the sum.\" (clean)"
+    },
+    {
+      "case": "T02a-replace-then-create-loses-siblings",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 5.1,
+      "actual": "one-run-sentence: replace-first create failed; create-first -> \"Retention: Retainage Note of the sum.\" (clean) | three-run-sentence: replace-first create failed; create-first -> \"Retention: Retainage Note of the sum.\" (clean)"
+    },
+    {
+      "case": "T02b-footer-replace-overwrites-neighbours",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 14.4,
+      "actual": "4 replace() calls returned success:true and overwrote neighbouring text (1F000008 via sourceMap, 1F000012 via sourceMap, 1F000012 via xml, 1F000013 via xml); textPreview and sourceMap offsets disagree for the same token"
+    },
+    {
+      "case": "T02b-footer-replace-overwrites-neighbours",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 16.4,
+      "actual": "4 replace() calls returned success:true and overwrote neighbouring text (1F000008 via sourceMap, 1F000012 via sourceMap, 1F000012 via xml, 1F000013 via xml); textPreview and sourceMap offsets disagree for the same token"
+    },
+    {
+      "case": "T02c-tab-and-newline-from-value",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 7.2,
+      "actual": "tab -> <w:tab/> in 2/2 text calls; line break -> <w:br/> in 0/2 text calls (refused with: COMMAND_FAILED text-payload-unsupported-control-char); insert html \"<br>\" does produce <w:br/>"
+    },
+    {
+      "case": "T02c-tab-and-newline-from-value",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 7.3,
+      "actual": "tab -> <w:tab/> in 2/2 text calls; line break -> <w:br/> in 0/2 text calls (refused with: COMMAND_FAILED text-payload-unsupported-control-char); insert html \"<br>\" does produce <w:br/>"
+    },
+    {
+      "case": "T03a-footer-cc-mutations-refused",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 14.5,
+      "actual": "6/12 work; 6 refused; capabilities.resolve says \"supported\" for 6 of the refused ops"
+    },
+    {
+      "case": "T03a-footer-cc-mutations-refused",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 12.7,
+      "actual": "6/12 work; 6 refused; capabilities.resolve says \"supported\" for 6 of the refused ops"
+    },
+    {
+      "case": "T03b-footer-paragraph-addressing",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 7,
+      "actual": "7 gap(s): footer-plain-and-table word/footer1.xml: find in headerFooterPart returns 0 for text getText returns; footer-plain-and-table word/footer2.xml: find in headerFooterPart returns 0 for text getText returns; footer-plain-and-table word/footer2.xml: blocks.list lists none of the 4 table-cell paragraphs; po-locked-footer word/footer1.xml: find in headerFooterPart returns 0 for text getText returns; po-locked-footer word/footer1.xml: blocks.list lists none of the 13 table-cell paragraphs; po-locked-footer word/footer2.xml: find in headerFooterPart returns 0 for text getText returns; po-locked-footer word/footer2.xml: blocks.list lists none of the 13 table-cell paragraphs"
+    },
+    {
+      "case": "T03b-footer-paragraph-addressing",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 7.1,
+      "actual": "7 gap(s): footer-plain-and-table word/footer1.xml: find in headerFooterPart returns 0 for text getText returns; footer-plain-and-table word/footer2.xml: find in headerFooterPart returns 0 for text getText returns; footer-plain-and-table word/footer2.xml: blocks.list lists none of the 4 table-cell paragraphs; po-locked-footer word/footer1.xml: find in headerFooterPart returns 0 for text getText returns; po-locked-footer word/footer1.xml: blocks.list lists none of the 13 table-cell paragraphs; po-locked-footer word/footer2.xml: find in headerFooterPart returns 0 for text getText returns; po-locked-footer word/footer2.xml: blocks.list lists none of the 13 table-cell paragraphs"
+    },
+    {
+      "case": "T04a-footer-mint-drops-run-properties",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 5,
+      "actual": "footer: same-run rPr kept, own-run rPr kept; body comparison: rPr kept"
+    },
+    {
+      "case": "T04a-footer-mint-drops-run-properties",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 5.8,
+      "actual": "footer: same-run rPr kept, own-run rPr kept; body comparison: rPr kept"
+    },
+    {
+      "case": "T04b-body-create-setvalue-drops-run-properties",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 2.6,
+      "actual": "create + text.setValue: rPr kept; create only: rPr kept; replace() only: rPr kept"
+    },
+    {
+      "case": "T04b-body-create-setvalue-drops-run-properties",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 3.7,
+      "actual": "create + text.setValue: rPr kept; create only: rPr kept; replace() only: rPr kept"
+    },
+    {
+      "case": "T05a-readonly-does-not-gate-content-control-writes",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 2.7,
+      "actual": "raw text writes outside: refused (lock is on) | content-control writes outside that succeeded and reached the file: 7/7 (text.setValue, date.setValue, checkbox.setState, clearContent, create.image in seller_signature, create.contentControl on body text, unwrap) | nodeEdge range: refused"
+    },
+    {
+      "case": "T05a-readonly-does-not-gate-content-control-writes",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 4.2,
+      "actual": "raw text writes outside: refused (lock is on) | content-control writes outside that succeeded and reached the file: 7/7 (text.setValue, date.setValue, checkbox.setState, clearContent, create.image in seller_signature, create.contentControl on body text, unwrap) | nodeEdge range: refused"
+    },
+    {
+      "case": "T05b-permission-ranges-not-exported",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 2.1,
+      "actual": "range: exported, list() after reopen total=1 | restriction: w:documentProtection exported, protection.get() after reopen mode=readOnly"
+    },
+    {
+      "case": "T05b-permission-ranges-not-exported",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 2.4,
+      "actual": "range: exported, list() after reopen total=1 | restriction: w:documentProtection exported, protection.get() after reopen mode=readOnly"
+    },
+    {
+      "case": "T05c-contentlocked-block-not-enforced",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 1.6,
+      "actual": "(a) create.contentControl SUCCEEDED | (b) replaceContent SUCCEEDED inside a contentLocked block"
+    },
+    {
+      "case": "T05c-contentlocked-block-not-enforced",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 3,
+      "actual": "(a) create.contentControl SUCCEEDED | (b) replaceContent SUCCEEDED inside a contentLocked block"
+    },
+    {
+      "case": "T06a-create-image-fails-beside-page-field",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 2.6,
+      "actual": "field in same paragraph: THROWS TARGET_NOT_FOUND image-paragraph-not-found (dryRun success) | field in sibling paragraph: image inside SDT"
+    },
+    {
+      "case": "T06a-create-image-fails-beside-page-field",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 4.7,
+      "actual": "field in same paragraph: THROWS TARGET_NOT_FOUND image-paragraph-not-found (dryRun success) | field in sibling paragraph: image inside SDT"
+    },
+    {
+      "case": "T06b-second-image-lands-outside-its-sdt",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 2.5,
+      "actual": "seller then buyer: create.image success:true x2, drawing inside {\"seller_initials\":true,\"buyer_initials\":false} | buyer then seller: inside {\"buyer_initials\":true,\"seller_initials\":true}"
+    },
+    {
+      "case": "T06b-second-image-lands-outside-its-sdt",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 2.5,
+      "actual": "seller then buyer: create.image success:true x2, drawing inside {\"seller_initials\":true,\"buyer_initials\":false} | buyer then seller: inside {\"buyer_initials\":true,\"seller_initials\":true}"
+    },
+    {
+      "case": "T06c-images-list-ignores-in-and-size-unit",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 3.3,
+      "actual": "(a) THROWS VALIDATION_ERROR create image:size.unit is not allowed by schema. | (b) images.list({in: footer}) total=1 while the only image is in the body"
+    },
+    {
+      "case": "T06c-images-list-ignores-in-and-size-unit",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 3.5,
+      "actual": "(a) THROWS VALIDATION_ERROR create image:size.unit is not allowed by schema. | (b) images.list({in: footer}) total=1 while the only image is in the body"
+    },
+    {
+      "case": "T07a-unbound-numbering-prefix-blocks-create",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 8.5,
+      "actual": "undeclared prefixes: replace OK, body create THROWS INVALID_INPUT Cannot read content-control identities from malformed package XML., footer create THROWS INVALID_INPUT Cannot read content-control identities from malformed package XML. | declared: body create success:true | real template: 0/9 converted as exported vs 9/9 with prefixes declared"
+    },
+    {
+      "case": "T07a-unbound-numbering-prefix-blocks-create",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 6.8,
+      "actual": "undeclared prefixes: replace OK, body create THROWS INVALID_INPUT Cannot read content-control identities from malformed package XML., footer create THROWS INVALID_INPUT Cannot read content-control identities from malformed package XML. | declared: body create success:true | real template: 0/9 converted as exported vs 9/9 with prefixes declared"
+    },
+    {
+      "case": "T07b-final-sectpr-loses-header-footer-references",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 4.8,
+      "actual": "every sectPr kept its header/footer references on 3 documents"
+    },
+    {
+      "case": "T07b-final-sectpr-loses-header-footer-references",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 3.3,
+      "actual": "every sectPr kept its header/footer references on 3 documents"
+    },
+    {
+      "case": "T08a-date-setvalue-writes-no-visible-text",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 3.4,
+      "actual": "date control: setValue success, w:fullDate=2026-09-21, visible text \"{{sig_date}}\" | text control: visible text \"2026-09-21\""
+    },
+    {
+      "case": "T08a-date-setvalue-writes-no-visible-text",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 1.7,
+      "actual": "date control: setValue success, w:fullDate=2026-09-21, visible text \"{{sig_date}}\" | text control: visible text \"2026-09-21\""
+    },
+    {
+      "case": "T08b-paragraph-id-changes-after-block-mint-and-clear",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 1.6,
+      "actual": "paragraph id changed on: mint 00000002->00000004, clearContent 00000004->00000005; receipts carry the new id: false; create.image at original id: THROWS TARGET_NOT_FOUND create.image target paragraph \"00000002\" was not found.; at current id: success:true; capabilities.get: create.image\":{\"available\":true,\"tracked\":true,\"trackedSupport\":\"always\",\"dryRun"
+    },
+    {
+      "case": "T08b-paragraph-id-changes-after-block-mint-and-clear",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 1.4,
+      "actual": "paragraph id changed on: mint 00000002->00000004, clearContent 00000004->00000005; receipts carry the new id: false; create.image at original id: THROWS TARGET_NOT_FOUND create.image target paragraph \"00000002\" was not found.; at current id: success:true; capabilities.get: create.image\":{\"available\":true,\"tracked\":true,\"trackedSupport\":\"always\",\"dryRun"
+    },
+    {
+      "case": "T09a-tracked-change-identity-and-fusion",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 1.5,
+      "actual": "per-call author/date: ignored (change attributed to \"Alice Reviewer\"); exported authors: Alice Reviewer; two adjacent same-author tracked inserts -> 1 change(s) (fused)"
+    },
+    {
+      "case": "T09a-tracked-change-identity-and-fusion",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 2.4,
+      "actual": "per-call author/date: ignored (change attributed to \"Alice Reviewer\"); exported authors: Alice Reviewer; two adjacent same-author tracked inserts -> 1 change(s) (fused)"
+    },
+    {
+      "case": "T10a-query-match-nondeterministic",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 28.3,
+      "actual": "10 fresh sessions returned total 1 (1: 10); without `in`: paragraph total 1 vs in:body total 1, table cell total 1 vs in:body total 1"
+    },
+    {
+      "case": "T10a-query-match-nondeterministic",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 25,
+      "actual": "10 fresh sessions returned total 1 (1: 10); without `in`: paragraph total 1 vs in:body total 1, table cell total 1 vs in:body total 1"
+    },
+    {
+      "case": "T10b-textbox-content-unreachable",
+      "sdk": "2.15.0",
+      "verdict": "FIXED",
+      "seconds": 4.2,
+      "actual": "getText has it: false; blocks.list has it: false; query.match totals: 0 / 1; replace by paragraph id: THROWS TARGET_NOT_FOUND Block \"00000009\" not found.; replace via the match target: success:(value returned); exported box written: true"
+    },
+    {
+      "case": "T10b-textbox-content-unreachable",
+      "sdk": "2.16.0-next.17",
+      "verdict": "FIXED",
+      "seconds": 3.3,
+      "actual": "getText has it: false; blocks.list has it: false; query.match totals: 0 / 1; replace by paragraph id: THROWS TARGET_NOT_FOUND Block \"00000009\" not found.; replace via the match target: success:(value returned); exported box written: true"
+    },
+    {
+      "case": "T10c-metadata-attach-inside-content-control",
+      "sdk": "2.15.0",
+      "verdict": "REPRODUCED",
+      "seconds": 1.5,
+      "actual": "plain text: success:true | inside the control: THROWS COMMAND_FAILED metadata.attach target overlaps unsupported content (text-range-in-sdt)."
+    },
+    {
+      "case": "T10c-metadata-attach-inside-content-control",
+      "sdk": "2.16.0-next.17",
+      "verdict": "REPRODUCED",
+      "seconds": 2.5,
+      "actual": "plain text: success:true | inside the control: THROWS COMMAND_FAILED metadata.attach target overlaps unsupported content (text-range-in-sdt)."
+    }
+  ]
+}

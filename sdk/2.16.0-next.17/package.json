@@ -1,0 +1,10 @@
+{
+  "name": "sdk-host-2.16.0-next.17",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pins @superdoc/sdk 2.16.0-next.17 exactly. The platform binary is an optionalDependency of the SDK; the lockfile records it for every platform.",
+  "license": "MIT",
+  "dependencies": {
+    "@superdoc/sdk": "2.16.0-next.17"
+  }
+}

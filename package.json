@@ -1,0 +1,17 @@
+{
+  "name": "superdoc-repro-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runnable reproductions of SuperDoc Document API issues found while migrating a contract platform from SuperDoc 1.x to 2.x.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "setup": "npm ci && npm ci --prefix sdk/2.13.0 && npm ci --prefix sdk/2.15.0 && npm ci --prefix sdk/2.16.0-next.17",
+    "all": "node run-all.mjs",
+    "linux": "bash scripts/run-linux.sh"
+  },
+  "dependencies": {
+    "jszip": "3.10.1"
+  }
+}
